@@ -1,0 +1,32 @@
+<div class="contact-wrapper">
+    <div>
+        <form [formGroup]="form" action="javascript:void(0)" (submit)="send()">
+            <marquee behavior="scrool" direction="left" scrollamount="7" loop="infinite"><b>👋 Let's get in touch — I'm
+                    Badrinath. Fill out the form and I'll get back to you soon!</b></marquee>
+            <div>
+                <label>Full Name:</label>
+                <input type="text" formControlName="from_name" placeholder="Enter your name" required>
+            </div>
+
+            <div>
+                <label>Email:</label>
+                <input type="email" formControlName="from_email" placeholder="you@gmail.com" required>
+            </div>
+
+            <div>
+                <label>Subject:</label>
+                <input type="text" formControlName="subject" placeholder="What's this about? " required>
+            </div>
+
+            <div>
+                <label>Message:</label>
+                <textarea formControlName="message" rows="5" placeholder="Type your message......" required></textarea>
+            </div>
+            <!-- {{form.value | json}} -->
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <div class="copyright-content">
+        <p>© 2025 Badrinath | Hand-coded with ❤️</p>
+    </div>
+</div>
