@@ -20,17 +20,12 @@ export class HomePageComponent implements OnInit {
   }
 
    openGmail(email: string): void {
-    const subject = encodeURIComponent('Hello!');
-    const body = encodeURIComponent('I wanted to reach out...');
-    
-    // Use mailto link
+    const subject = encodeURIComponent('Add your Subject');
+    const body = encodeURIComponent('Type your message');
     const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
-    
-    // Opens in the default mail client (Gmail if set)
     window.location.href = mailtoLink;
   }
-
-    phoneNumber = '+91 9966131456';
+  phoneNumber = '+91 9966131456';
 
   dialPhone(number: string): void {
     window.location.href = `tel:${number}`;
